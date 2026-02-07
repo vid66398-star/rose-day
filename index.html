@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For IMSA♥️</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #4b0f18, #8b1126);
+      color: white;
+      font-family: "Segoe UI", Arial, sans-serif;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      font-size: 2.4em;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.15em;
+      line-height: 1.8;
+      max-width: 650px;
+      margin: 18px auto;
+    }
+
+    .rose {
+      font-size: 90px;
+      cursor: pointer;
+      margin: 35px 0;
+      transition: transform 0.3s ease;
+    }
+
+    .rose:active {
+      transform: scale(1.15);
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    button {
+      background: rgba(255,255,255,0.15);
+      color: white;
+      border: 1px solid rgba(255,255,255,0.4);
+      padding: 10px 18px;
+      border-radius: 25px;
+      font-size: 0.95em;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    button:hover {
+      background: rgba(255,255,255,0.25);
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Hey IMSA♥️</h1>
+
+  <p>
+    The way you love me…<br>
+    I don’t just like it.<br>
+    I feel it.
+  </p>
+
+  <p>
+    Because some feelings aren’t meant to rush;<br>
+    they deserve time, intention, and truth.
+  </p>
+
+  <p>
+    Loving you isn’t about grand moments or perfect days.<br>
+    It’s about choosing you, darling.
+  </p>
+
+  <!-- Background Music -->
+  <audio id="bgMusic" loop>
+    <source src="our-song.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Rose -->
+  <div class="rose" id="roseBtn" onclick="firstReveal()">🌹</div>
+
+  <!-- First hidden message -->
+  <div id="firstMsg" class="hidden">
+    <p>
+      Be mine — always,<br>
+      Paal paandi mavane 🫂
+    </p>
+
+    <button onclick="secondReveal()">There’s more…</button>
+  </div>
+
+  <!-- Second hidden message -->
+  <div id="secondMsg" class="hidden">
+    <p>
+      I love you to the core,<br>
+      deeper than words can touch…
+    </p>
+
+    <p>
+      Oyeee IMSA 🥹<br>
+      Small surprise for you.<br>
+      Something special to feel.<br>
+      I hope you like it, dear ❤️
+    </p>
+  </div>
+
+  <script>
+    function firstReveal() {
+      const music = document.getElementById("bgMusic");
+      const rose = document.getElementById("roseBtn");
+
+      if (music.paused) {
+        music.play();
+      }
+
+      rose.innerText = "❤️";
+      document.getElementById("firstMsg").style.display = "block";
+    }
+
+    function secondReveal() {
+      document.getElementById("secondMsg").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
